@@ -1,7 +1,9 @@
 'make strict'
 
+//"Welcome" alert
 alert("Welcome! You are about to generate a random day trip. Press 'Enter' or click 'OK' to get started.")
-// list that hold all the options 
+
+// array that holds all of the current options
 let destination = ["Dallas", "Oklahoma City", "Denver", "Detroit", "Kansas City", "Cleveland"];
 let restaurant = ["Olive Garden", "Chili's", "Village Inn", "Outback", "Taco Bell", "Arby's", "iHop"];
 let transportation = ["walking", "driving", "riding a bicycle", "catching an Uber", "taking a limo", "skateboarding", "cruising in a boat"];
@@ -9,15 +11,11 @@ let entertainment = ["see a movie. May I suggest a rom-com?", "an amusement park
 
 //these variables will hold the random choice 
 let selectedDestination =  randomGenerator(destination)
-//console.log(selectedDestination)
 let selectedRestaurant = randomGenerator(restaurant)
-//console.log(selectedRestaurant)
 let selectedTransportation = randomGenerator(transportation)
-//console.log(selectedTransportation)
 let selectedEntertainment = randomGenerator(entertainment)
-//console.log(selectedEntertainment)
 
-// not current in use but array to hold all of the options
+//array to hold all variables
 let finishedList = [selectedDestination, selectedRestaurant, selectedTransportation, selectedEntertainment];
 
 // function to randomly select item out of an array
@@ -30,12 +28,12 @@ function randomGenerator(array){
 // alert for current trip
 alert("You will go to " + selectedDestination + "," + " you will eat at " + selectedRestaurant + "," + " you will get there by " + selectedTransportation + " and, in the evening you will go to " + selectedEntertainment)
 
-// function to allow user to pick re roll category
+//function to allow user to pick re roll category
 userOptions()
 function userOptions(){
     input = prompt("Do you like your trip? Enter yes to confirm the trip, or if you'd like to select a new destination enter 1, if you'd like to select a new restaurant enter 2, if you'd like a different mode of transportation enter 3, or if you want a different choice of entertainment for the evening enter 4.")
 
-
+//else if statements
 if (input === "yes"){
     alert("Your trip has been added to the console. Now go have some fun! Press refresh to try the whole thing again.")
     console.log("The user will go to " + selectedDestination + "," + " the user will eat at " + selectedRestaurant + "," + " the user will get there by " + selectedTransportation + " and, in the evening the user will go to " + selectedEntertainment)
