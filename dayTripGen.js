@@ -1,7 +1,6 @@
 'make strict'
 
 //"Welcome" alert
-
 alert("Welcome! You are about to generate a random day trip. Press 'Enter' or click 'OK' to get started.")
 
 // array that holds all of the current options
