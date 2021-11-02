@@ -1,9 +1,9 @@
 'make strict'
 // list that hold all the options 
-let destination = ["Dallas", "Oklahoma City", "Denver", "Detroit"];
-let restaurant = ["Olive Garden", "Chili's", "Village Inn", "Outback" ];
-let transportation = ["Walk", "Drive", "Bicycle", "Uber"];
-let entertainment = ["Movie", "Amusement Park", "Painting Workshop", "Dancing"];
+let destination = ["Dallas", "Oklahoma City", "Denver", "Detroit", "Kansas City", "Cleveland"];
+let restaurant = ["Olive Garden", "Chili's", "Village Inn", "Outback", "Taco Bell", "Arby's", "iHop"];
+let transportation = ["walking", "driving", "riding a bicycle", "catching an Uber", "taking a limo", "skateboarding", "cruising in a boat"];
+let entertainment = ["see a movie!", "an amusement park!", "a painting workshop!", "a dance club!", "a renaissance fair! *Swords clink*", "a slam poetry session!", "feed some ducks! *quack*"];
 
 //these variables will hold the random choice 
 let selectedDestination =  randomGenerator(destination)
@@ -26,31 +26,47 @@ function randomGenerator(array){
 }
 
 // alert for current trip
-alert("you will go to " + selectedDestination + " you will eat at " + selectedRestaurant + " you will get there by " + selectedTransportation + " in the evening you will go to " + selectedEntertainment)
+alert("You will go to " + selectedDestination + "," + " you will eat at " + selectedRestaurant + "," + " you will get there by " + selectedTransportation + " and, in the evening you will go to " + selectedEntertainment)
 
 // function to allow user to pick re roll category
 userOptions()
 function userOptions(){
-    input = prompt("do you like your trip? Enter yes to confirm the trip, if you want a new destination enter 1, if you want a new restaurant press 2, if you want a new mode of transportation press 3, if you want a different entertainment for the evening press 4")
+    input = prompt("Do you like your trip? Enter yes to confirm the trip, or if you'd like to select a new destination enter 1, if you'd like to select a new restaurant enter 2, if you'd like a different mode of transportation enter 3, or if you want a different choice of entertainment for the evening enter 4.")
 if (input === "1"){
     selectedDestination = randomGenerator(destination)
     let finishedList = [selectedDestination, selectedRestaurant, selectedTransportation, selectedEntertainment];
-    alert("your destination will now be " + selectedDestination)
-    alert("you will go to " + selectedDestination + " you will eat at " + selectedRestaurant + " you will get there by " + selectedTransportation + " in the evening you will go to " + selectedEntertainment)
+    alert("Your destination will now be " + selectedDestination)
+    alert("You will go to " + selectedDestination + "," + " you will eat at " + selectedRestaurant + "," + " you will get there by " + selectedTransportation + " and, in the evening you will go to " + selectedEntertainment)
     userOptions(finishedList)
 }
 else if (input === "2"){
-    // same logic as above adapted for restaurant
+    selectedRestaurant = randomGenerator(restaurant)
+    let finishedList = [selectedDestination, selectedRestaurant, selectedTransportation, selectedEntertainment];
+    alert("You will now eat at " + selectedRestaurant)
+    alert("You will go to " + selectedDestination + "," + " you will eat at " + selectedRestaurant + "," + " you will get there by " + selectedTransportation + " and, in the evening you will go to " + selectedEntertainment)
+    userOptions(finishedList)
 }
 else if (input === "3"){
-    // same logic but adapted for transportation
+    selectedTransportation = randomGenerator(transportation)
+    let finishedList = [selectedDestination, selectedRestaurant, selectedTransportation, selectedEntertainment];
+    alert("You will now get there by " + selectedTransportation)
+    alert("You will go to " + selectedDestination + "," + " you will eat at " + selectedRestaurant + "," + " you will get there by " + selectedTransportation + " and, in the evening you will go to " + selectedEntertainment)
+    userOptions(finishedList)
 }
 else if (input === "4"){
-    // same logic but adapted for entertainment 
+    selectedEntertainment = randomGenerator(entertainment)
+    let finishedList = [selectedDestination, selectedRestaurant, selectedTransportation, selectedEntertainment];
+    alert("In the evening you will now go to " + selectedEntertainment)
+    alert("You will go to " + selectedDestination + "," + " you will eat at " + selectedRestaurant + "," + " you will get there by " + selectedTransportation + " and, in the evening you will go to " + selectedEntertainment)
+    userOptions(finishedList)
 }
 else if (input === "yes"){
-    alert("your trip has been confirmed in the console")
-    console.log("you will go to " + selectedDestination + " you will eat at " + selectedRestaurant + " you will get there by " + selectedTransportation + " in the evening you will go to " + selectedEntertainment)
+    alert("Your trip has been added to the console. Now go have fun :)")
+    console.log("The user will go to " + selectedDestination + "," + " the user will eat at " + selectedRestaurant + "," + " the user will get there by " + selectedTransportation + " and, in the evening the user will go to " + selectedEntertainment)
+}
+else if (input === "Yes"){
+    alert("You said yes with a capital Y. That was not even an option you rule breaker! Nevertheless, your trip has been added to the console and now it is time to GO HAVE FUN!")
+    console.log("The user will go to " + selectedDestination + "," + " the user will eat at " + selectedRestaurant + "," + " the user will get there by " + selectedTransportation + " and, in the evening the user will go to " + selectedEntertainment)
 }
 }
 
