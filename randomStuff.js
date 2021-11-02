@@ -1,14 +1,13 @@
 'make strict'
 
 //"Welcome" alert
-
-alert("Welcome! You are about to generate a random day trip. Press 'Enter' or click 'OK' to get started.")
+alert("Welcome! You are about to generate a random day trip for Grand Junction. You can use this to create a date, or just a fun day for your family. Press 'Enter' or click 'OK' to get started.")
 
 // array that holds all of the current options
-let destination = ["Dallas", "Oklahoma City", "Denver", "Detroit", "Kansas City", "Cleveland"];
-let restaurant = ["Olive Garden", "Chili's", "Village Inn", "Outback", "Taco Bell", "Arby's", "iHop"];
-let transportation = ["walking", "driving", "riding a bicycle", "catching an Uber", "taking a limo", "skateboarding", "cruising in a boat"];
-let entertainment = ["see a movie. May I suggest a rom-com?", "an amusement park! WOOOO!", "a painting workshop. Let's get our 'Bob Ross' on!", "a dance club! It takes two to tango.", "a renaissance fair! Don't forget thy armor!", "a slam poetry session! It's about to get deep.", "a pond to feed some ducks! *quack*"];
+let breakfast = ["Dream Cafe", "iHop", "Village Inn", "Randy's South Side Diner", "Denny's"];
+let lunch = [];
+let transportation = [];
+let entertainment = ["see a movie. May I suggest a rom-com?", "Bananas...mini golf anyone?", "The Palette. Let's get our 'Bob Ross' on!", "Quincy's for some kaorke *clears throat.", "Get Air", "Bank 8 for some pool!", "Canyonview Park to feed some ducks! *quack*", "Orchard Mesa Pool. Don't forget your noodles :)"];
 
 //these variables will hold the random choice 
 let selectedDestination =  randomGenerator(destination)
